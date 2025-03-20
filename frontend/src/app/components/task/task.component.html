@@ -1,5 +1,14 @@
 <div class="task-container">
-  <h2>LIsta de Tarefas</h2>
+  <h2>Lista de Tarefas</h2>
+
+  <button (click)="toggleTaskForm()" class="add-task-btn">Adicionar Tarefa</button>
+
+  <div *ngIf="showTaskForm" class="task-form">
+    <input type="text" [(ngModel)]="newTask.nome" placeholder="Nome">
+    <textarea [(ngModel)]="newTask.descricao" placeholder="Descrição"></textarea>
+    <button (click)="addTask()">Salvar</button>
+    <button (click)="toggleTaskForm()">Cancelar</button>
+  </div>
 
   <div *ngIf="tasks.length > 0; else noTasks">
     <ul class="task-list">
