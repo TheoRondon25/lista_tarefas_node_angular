@@ -4,7 +4,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    background-color:  #f9f9f9;
     text-align: center;
   }
   
@@ -31,30 +31,69 @@
   .task-content {
     text-align: left;
   }
+
+  .task-form {
+    background: #f8f9fa;
+    padding: 16px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group label {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .input-group input, .input-group textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .initial-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
   
   .task-actions {
     display: flex;
     gap: 10px;
   }
   
-  .edit-btn, .delete-btn, .finish-btn {
+  .edit-btn, .delete-btn, .finish-btn, .save-btn, .cancel-btn, .add-task-btn, .show-task-btn, .update-btn {
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
   }
 
-  .finish-btn {
+  .finish-btn, .add-task-btn {
     background-color: #2887e5;
     color: white;
   }
   
-  .edit-btn {
+  .edit-btn, .save-btn, .show-task-btn, .update-btn {
     background-color: #4CAF50;
     color: white;
   }
   
-  .delete-btn {
+  .delete-btn, .cancel-btn {
     background-color: #E53935;
     color: white;
   }
@@ -64,3 +103,19 @@
     font-size: 16px;
   }
   
+  .success-message {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    animation: fadeOut 3s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
